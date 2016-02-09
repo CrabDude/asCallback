@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/crabdude/.nvm/versions/node/v5.5.0/bin/node',
+1 verbose cli   '/Users/crabdude/.nvm/versions/node/v5.5.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/crabdude/Dropbox/mine/asCallback',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/crabdude/.npm/asCallBack/1.1.0/package.tgz not in flight; packing
+9 info lifecycle asCallBack@1.1.0~prepublish: asCallBack@1.1.0
+10 silly lifecycle asCallBack@1.1.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/crabdude/.npm/asCallBack/1.1.0/package.tgz',
+11 verbose tar pack   '/Users/crabdude/Dropbox/mine/asCallback' ]
+12 verbose tarball /Users/crabdude/.npm/asCallBack/1.1.0/package.tgz
+13 verbose folder /Users/crabdude/Dropbox/mine/asCallback
+14 verbose addLocalTarball adding from inside cache /Users/crabdude/.npm/asCallBack/1.1.0/package.tgz
+15 silly cache afterAdd asCallBack@1.1.0
+16 verbose afterAdd /Users/crabdude/.npm/asCallBack/1.1.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/crabdude/.npm/asCallBack/1.1.0/package/package.json written
+18 silly publish { name: 'asCallBack',
+18 silly publish   version: '1.1.0',
+18 silly publish   description: 'Use bluebird\'s asCallback (aka nodeify) to convert promises to node style callbacks.',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/crabdude/asCallback.git' },
+18 silly publish   keywords: [ 'promise', 'then', 'nodeify', 'callback', 'asCallback' ],
+18 silly publish   author: { name: 'Adam Crabtree' },
+18 silly publish   license: 'MIT',
+18 silly publish   dependencies: {},
+18 silly publish   readme: '# asCallback\n\nUse `bluebird`\'s [`promise.asCallback(callback)`](http://bluebirdjs.com/docs/api/ascallback.html) (aka `.nodeify`) method as a function to convert non-bluebird promises to node style callbacks.\n\n## Installation\n\n```bash\n$ npm install asCallback\n```\n\n## Usage\n\n### Functional\n\nCall `asCallback` directly passing the `promise`, `callback` and an optional `options` argument.\n\n```javascript\nvar asCallback = require(\'asCallback\')\n\nfunction myAsyncMethod(arg, callback) {\n  return asCallback(myPromiseMethod(arg), callback)\n}\n```\n\nSee the [bluebird\'s `.asCallback` docs](http://bluebirdjs.com/docs/api/ascallback.html) for full feature set and supported options like [`"spread"`](http://bluebirdjs.com/docs/api/ascallback.html#option-spread).\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'dd37169ebe0bf5229f25555b9ba8b2586a01fdec',
+18 silly publish   bugs: { url: 'https://github.com/crabdude/asCallback/issues' },
+18 silly publish   homepage: 'https://github.com/crabdude/asCallback#readme',
+18 silly publish   _id: 'asCallBack@1.1.0',
+18 silly publish   _shasum: 'ecd724b6d81ef9274d3fcff6f08da4c2a0e6c554',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name asCallBack
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/asCallBack
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/crabdude/.npm/asCallBack/1.1.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/asCallBack
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 4:10:53 PM
+29 verbose request id 562de64d117498de
+30 http request PUT https://registry.npmjs.org/asCallBack
+31 http 400 https://registry.npmjs.org/asCallBack
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '54',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Tue, 09 Feb 2016 00:10:53 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-sjc3135-SJC',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1454976653.785148,VS0,VE200' }
+33 verbose request invalidating /Users/crabdude/.npm/registry.npmjs.org/asCallBack on PUT
+34 error publish Failed PUT 400
+35 verbose stack Error: name can no longer contain capital letters : asCallBack
+35 verbose stack     at makeError (/Users/crabdude/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/Users/crabdude/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/Users/crabdude/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/Users/crabdude/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:100:13)
+35 verbose stack     at Request.emit (events.js:185:7)
+35 verbose stack     at Request.<anonymous> (/Users/crabdude/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:95:20)
+35 verbose stack     at Request.emit (events.js:182:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/Users/crabdude/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 400
+37 verbose pkgid asCallBack
+38 verbose cwd /Users/crabdude/Dropbox/mine/asCallback
+39 error Darwin 15.3.0
+40 error argv "/Users/crabdude/.nvm/versions/node/v5.5.0/bin/node" "/Users/crabdude/.nvm/versions/node/v5.5.0/bin/npm" "publish"
+41 error node v5.5.0
+42 error npm  v3.3.12
+43 error code E400
+44 error name can no longer contain capital letters : asCallBack
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

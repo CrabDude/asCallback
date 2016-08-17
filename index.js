@@ -1,3 +1,5 @@
+'use strict';
+
 function asCallback(promise, cb, options) {
   if (typeof cb !== 'function') return promise
 
